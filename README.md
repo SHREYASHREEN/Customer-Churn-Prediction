@@ -4,7 +4,7 @@ An interactive machine-learning application that predicts customer churn risk us
 
 ## 🚀 Live Demo
 
-**[👉 Click here to open ChurnIQ](YOUR-STREAMLIT-APP-URL)**
+https://customer-churn-prediction-biqkerg4mysctrkt6gajs8.streamlit.app/
 
 Create an account or log in to explore the customer churn prediction dashboard.
 
