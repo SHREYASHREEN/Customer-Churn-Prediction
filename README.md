@@ -1,57 +1,84 @@
-# ChurnIQ — Customer Churn Prediction
+# 📊 ChurnIQ — Customer Churn Prediction
 
-A Streamlit-based customer churn prediction project using a trained XGBoost model.
+An interactive machine-learning application that predicts customer churn risk using XGBoost and helps businesses identify customers who may leave their services.
 
-## What's new in this updated version
+## 🚀 Live Demo
 
-- Login and logout
-- Create-account / registration page
-- Local SQLite user database (`users.db` is created automatically on first run)
-- Passwords stored as salted PBKDF2-HMAC-SHA256 hashes (not plain text)
-- Session-based access to the prediction dashboard
-- Refreshed dashboard layout and customer-profile sections
-- Churn probability, Low/Medium/High risk band, and prediction result
+**[👉 Click here to open ChurnIQ](YOUR-STREAMLIT-APP-URL)**
 
-## Run on Windows (VS Code / PowerShell)
+Create an account or log in to explore the customer churn prediction dashboard.
 
-1. Extract this ZIP file.
-2. Open the extracted `Customer_Churn_Project` folder in VS Code.
-3. Open **Terminal → New Terminal**.
-4. (Recommended) Create and activate a virtual environment:
+## 📌 Project Overview
 
-   ```powershell
-   py -3.11 -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
+Customer churn occurs when customers stop using a company's products or services. Identifying customers who are likely to leave can help businesses develop better customer-retention strategies.
 
-   If PowerShell blocks activation, run this in the same terminal and retry activation:
+ChurnIQ uses machine learning to estimate churn probability based on customer information and presents the results through an interactive Streamlit dashboard.
 
-   ```powershell
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-   .\.venv\Scripts\Activate.ps1
-   ```
+## ✨ Features
 
-5. Install dependencies:
+* 🔐 User registration, login, and logout
+* 📊 Interactive customer churn prediction dashboard
+* 🤖 XGBoost-based churn prediction
+* 📈 Churn probability and risk classification
+* 🟢 Low, 🟡 Medium, and 🔴 High risk categories
+* 👤 Customer information input
+* 📉 Model evaluation and feature-importance analysis
 
-   ```powershell
-   python -m pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
+## 🛠️ Technologies Used
 
-6. Start the app:
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* XGBoost
+* Streamlit
+* SQLite
+* Joblib
 
-   ```powershell
-   python -m streamlit run app.py
-   ```
+## 🧠 Machine Learning
 
-7. Streamlit will show a local address, usually `http://localhost:8501`, and may open it in your browser.
-8. Select **Create account**, make a username and password (at least 8 characters), then go to **Login**.
-9. After login, enter customer details and click **Predict churn**. Use **Logout** in the sidebar to end the session.
+Three classification algorithms were evaluated:
 
-## Important notes
+1. Logistic Regression
+2. Random Forest
+3. XGBoost
 
-- Keep the trained `.pkl` model files in the project root as supplied.
-- `users.db` is generated automatically when you first run the app. It stores local demo accounts. It is not included in the ZIP.
-- If you share the project folder with a mentor, they can register their own account on their machine.
-- This authentication is suitable for a local academic demonstration, not production deployment. A production application should use HTTPS, managed identity/authentication, rate limiting, secure secret management, and additional account protections.
-- The model prediction is an estimate based on the training data and should not be treated as a guarantee.
+XGBoost was selected as the primary model based on the overall model-comparison results.
+
+The model was evaluated using accuracy, precision, recall, F1-score, and ROC-AUC.
+
+### Final XGBoost Results
+
+| Metric    |  Score |
+| --------- | -----: |
+| Accuracy  | 80.27% |
+| Precision | 65.19% |
+| Recall    | 55.08% |
+| F1-score  | 59.71% |
+| ROC-AUC   | 85.41% |
+
+*These scores reflect the recorded evaluation results for the model version used in this project.*
+
+## ⚙️ Run Locally
+
+1. Clone this repository.
+2. Install the required packages using `pip install -r requirements.txt`.
+3. Ensure the trained model files are in the project directory.
+4. Run `python -m streamlit run app.py`.
+5. Open the local URL displayed in the terminal.
+
+## 🔒 Authentication
+
+The application includes account registration and login using password hashing and a local SQLite database.
+
+The authentication implementation is intended for academic demonstration and is not a production-grade identity system.
+
+## 🎯 Project Objective
+
+To demonstrate how machine learning can be used to estimate customer churn risk and present predictions through an accessible web application.
+
+## 👩‍💻 Developer
+
+**Shreya Shree N**
+
+MCA Student | Machine Learning | Python | Web Applications
