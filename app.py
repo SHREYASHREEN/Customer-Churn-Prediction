@@ -69,31 +69,158 @@ def verify_user(username, password):
 init_db()
 
 # ---------- Styling ----------
+```python
 st.markdown("""
 <style>
-    .stApp { background: #f5f7fb; }
-    [data-testid="stHeader"] { background: rgba(245,247,251,0.92); }
-    .block-container { padding-top: 1.7rem; padding-bottom: 2rem; max-width: 1300px; }
+    /* Main application background and default text */
+    .stApp,
+    [data-testid="stAppViewContainer"] {
+        background-color: #F5F7FB !important;
+        color: #243447 !important;
+    }
+
+    /* Main content spacing */
+    .block-container {
+        padding-top: 1.7rem;
+        padding-bottom: 2rem;
+        max-width: 1300px;
+    }
+
+    /* Make headings readable */
+    h1, h2, h3, h4, h5, h6,
+    p, label, li, span,
+    [data-testid="stMarkdownContainer"] p {
+        color: #243447;
+    }
+
+    /* Header */
+    [data-testid="stHeader"] {
+        background: #F5F7FB;
+    }
+
+    /* ChurnIQ branding card */
     .hero {
-        padding: 1.5rem 1.7rem; border-radius: 18px;
-        background: linear-gradient(115deg, #102a43 0%, #176b87 65%, #21a0a0 100%);
-        color: white; margin-bottom: 1rem;
+        padding: 1.5rem 1.7rem;
+        border-radius: 18px;
+        background: linear-gradient(
+            115deg,
+            #102A43 0%,
+            #176B87 65%,
+            #219A9A 100%
+        );
+        color: #FFFFFF !important;
+        margin-bottom: 1rem;
     }
-    .hero h1 { color: white; margin: 0; font-size: 2.2rem; }
-    .hero p { color: #e5f4f8; margin: .45rem 0 0 0; font-size: 1rem; }
-    .small-label { color: #526579; font-size: .9rem; }
-    div[data-testid="stMetric"] {
-        background: white; padding: 1rem 1.2rem; border-radius: 14px;
-        border: 1px solid #e4eaf2; box-shadow: 0 2px 8px rgba(16,42,67,.04);
+
+    .hero h1 {
+        color: #FFFFFF !important;
+        margin: 0;
+        font-size: 2.2rem;
     }
-    div.stButton > button { border-radius: 9px; font-weight: 600; }
+
+    .hero p {
+        color: #F0FAFF !important;
+        margin: .45rem 0 0 0;
+        font-size: 1rem;
+    }
+
+    /* Login and registration card */
     .auth-card {
-        background: white; border: 1px solid #e3eaf2; border-radius: 18px;
+        background-color: #FFFFFF;
+        color: #243447;
+        border: 1px solid #DCE5EF;
+        border-radius: 18px;
         padding: 1.4rem 1.6rem;
     }
-    footer { visibility: hidden; }
+
+    /* Input labels */
+    [data-testid="stWidgetLabel"],
+    [data-testid="stWidgetLabel"] p,
+    label,
+    .stTextInput label,
+    .stNumberInput label,
+    .stSelectbox label {
+        color: #243447 !important;
+    }
+
+    /* Text fields */
+    div[data-baseweb="input"] input,
+    div[data-baseweb="textarea"] textarea,
+    div[data-baseweb="select"] > div {
+        background-color: #FFFFFF !important;
+        color: #243447 !important;
+        -webkit-text-fill-color: #243447 !important;
+        border-color: #C9D5E3 !important;
+    }
+
+    /* Placeholder text */
+    input::placeholder,
+    textarea::placeholder {
+        color: #77869A !important;
+        -webkit-text-fill-color: #77869A !important;
+        opacity: 1 !important;
+    }
+
+    /* Login and registration tabs */
+    button[data-baseweb="tab"] {
+        color: #34465A !important;
+    }
+
+    button[data-baseweb="tab"] p {
+        color: #34465A !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] {
+        color: #FF4B4B !important;
+    }
+
+    button[data-baseweb="tab"][aria-selected="true"] p {
+        color: #FF4B4B !important;
+    }
+
+    /* Primary buttons */
+    div.stButton > button,
+    div[data-testid="stFormSubmitButton"] button {
+        border-radius: 9px;
+        font-weight: 600;
+    }
+
+    /* Metrics cards */
+    div[data-testid="stMetric"] {
+        background: #FFFFFF;
+        color: #243447;
+        padding: 1rem 1.2rem;
+        border-radius: 14px;
+        border: 1px solid #E4EAF2;
+        box-shadow: 0 2px 8px rgba(16, 42, 67, 0.04);
+    }
+
+    /* Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #FFFFFF;
+    }
+
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: #243447;
+    }
+
+    /* Supporting text */
+    .small-label {
+        color: #526579;
+        font-size: .9rem;
+    }
+
+    /* Hide Streamlit footer */
+    footer {
+        visibility: hidden;
+    }
 </style>
 """, unsafe_allow_html=True)
+```
 
 @st.cache_resource
 def load_artifacts():
