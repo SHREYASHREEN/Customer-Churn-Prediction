@@ -15,17 +15,16 @@ suggests retention actions and can score a whole CSV file of customers. It is bu
 
 ## 1. Features
 
-| Page | What it does | Code |
-|---|---|---|
-| 🔐 **Login / Register** | Create an account and log in. Passwords are stored only as salted PBKDF2-SHA256 hashes. All other pages are blocked until you are logged in. Log out from the sidebar. | `auth.py` |
-| 📊 **Dashboard** | KPI cards (total, churned, stayed, churn %, retention %) and 6 charts from the real dataset: churned vs retained, churn by contract, payment method, internet service, tenure group, monthly charges. | `views.render_dashboard` |
-| 🔮 **Predict Customer** | Form with the 19 customer fields in three sections. Shows *Likely to Churn / Likely to Stay*, churn probability, risk category, a colour probability bar, the top factors behind the prediction (SHAP) and retention recommendations. Includes 3 one-click **real-customer examples**. | `views.render_predict` |
-| 📁 **Batch Prediction** | Upload a CSV, get a probability, predicted class and risk category for every valid customer, a summary and a downloadable result file. Invalid rows are listed with reasons, never silently dropped. Template and sample files can be downloaded. | `views.render_batch`, `churn_utils.run_batch` |
-| 🧭 **Risk & Retention** | Explains Low / Medium / High risk, checks them against reality, and shows the retention playbook with evidence from the dataset. | `views.render_risk` |
-| 📈 **Model Performance** | Accuracy, precision, recall, F1, ROC-AUC for Logistic Regression, Random Forest and XGBoost; confusion matrix, ROC curve, cross-validation, feature importance, and an honest reading of the results. | `views.render_performance` |
-| 🧠 **Explainable AI** | Global SHAP ranking of the most influential customer details, with a correlation-vs-causation warning. | `views.render_explainability` |
-| ℹ️ **About** | Method, dataset, limitations, library versions. | `views.render_about` |
+| Page | What it does |
+|---|---|
+| 🔐 Login / Register | Allows users to create an account and log in. |
+| 📊 Dashboard | Displays customer statistics and churn analysis charts. |
+| 🔮 Predict Customer | Predicts whether an individual customer is likely to churn and displays the churn probability. |
+| 📁 Batch Prediction | Uploads a CSV file and predicts churn for multiple customers. |
+| 🧭 Risk & Retention | Categorizes customers into Low, Medium and High risk and provides retention recommendations. |
+| 📈 Model Performance | Displays model evaluation metrics, confusion matrix, ROC curve and feature importance. |
 
+**Risk levels:** Low < 30% · Medium 30%–50% · High > 50%.
 **Risk levels (fixed, consistent everywhere):** Low < 30 % · Medium 30 %–50 % (inclusive) · High > 50 %. A customer is predicted to churn when the probability is above 50 %; this standard decision threshold was **not changed**.
 
 ---
