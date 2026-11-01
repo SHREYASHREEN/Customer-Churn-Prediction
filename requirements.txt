@@ -1,0 +1,14 @@
+# Tested with Python 3.12 (Linux). These exact versions produced every result and test in this project.
+# Install with:   pip install -r requirements.txt
+streamlit==1.66.1
+altair==6.3.0        # charts (installed together with Streamlit; pinned for reproducibility)
+pandas==3.1.0
+numpy==2.5.4
+scikit-learn==1.9.1
+xgboost==3.4.1
+shap==0.54.1
+joblib==1.6.0
+matplotlib==3.11.2   # used by the notebook and SHAP
+seaborn==0.13.2      # used by the notebook
+openpyxl==3.1.5      # reads the .xlsx dataset (pandas.read_excel)
+ipykernel==7.4.0     # lets VS Code / Jupyter run the notebook

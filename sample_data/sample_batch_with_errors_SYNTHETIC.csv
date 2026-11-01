@@ -1,0 +1,9 @@
+﻿CustomerID,gender,Senior Citizen,Partner,Dependents,Tenure Months,Phone Service,Multiple Lines,Internet Service,Online Security,Online Backup,Device Protection,Tech Support,Streaming TV,Streaming Movies,Contract,Paperless Billing,Payment Method,Monthly Charges,Total Charges,Notes
+DEMO-OK-1,Female,No,No,No,3,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,89.1,267.3,SYNTHETIC demo row
+DEMO-OK-2,Male,No,Yes,Yes,34,Yes,Yes,DSL,Yes,Yes,No,Yes,No,No,One year,No,Mailed check,58.2,1978.8,SYNTHETIC demo row
+DEMO-NEW-CUSTOMER,Female,Yes,Yes,No,0,Yes,No,No,No internet service,No internet service,No internet service,No internet service,No internet service,No internet service,Two year,No,Bank transfer (automatic),20.25,,SYNTHETIC demo row
+DEMO-BAD-CONTRACT,Female,No,No,No,3,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Monthly,Yes,Electronic check,89.1,267.3,SYNTHETIC demo row
+DEMO-BAD-COMBO,Female,No,No,No,3,Yes,No,No,Yes,No,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,89.1,267.3,SYNTHETIC demo row
+DEMO-BAD-TENURE,Male,No,Yes,Yes,,Yes,Yes,DSL,Yes,Yes,No,Yes,No,No,One year,No,Mailed check,58.2,1978.8,SYNTHETIC demo row
+DEMO-BAD-BILLING,Male,No,Yes,Yes,34,Yes,Yes,DSL,Yes,Yes,No,Yes,No,No,One year,No,Mailed check,58.2,9999,SYNTHETIC demo row
+DEMO-BAD-NUMBER,Female,No,No,No,3,Yes,No,Fiber optic,No,No,No,No,Yes,Yes,Month-to-month,Yes,Electronic check,abc,267.3,SYNTHETIC demo row

@@ -1,0 +1,6 @@
+# Keep binary model files byte-for-byte unchanged (no line-ending conversion).
+*.ubj binary
+*.pkl binary
+*.xlsx binary
+*.png binary
+*.zip binary

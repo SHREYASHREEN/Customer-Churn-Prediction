@@ -1,0 +1,14 @@
+# Streamlit settings for this project (read automatically when you run `streamlit run app.py` from the project folder)
+[theme]
+base = "light"
+primaryColor = "#2563EB"
+backgroundColor = "#F8FAFC"
+secondaryBackgroundColor = "#EEF2F7"
+textColor = "#1F2937"
+font = "sans serif"
+
+[server]
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false

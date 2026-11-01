@@ -1,0 +1,8 @@
+Measure,Best on single test split,Best in 15-run cross-validation
+Accuracy,XGBoost,Logistic Regression
+Precision,XGBoost,Logistic Regression
+Recall,Logistic Regression,Logistic Regression
+F1 Score,XGBoost,Logistic Regression
+ROC-AUC,XGBoost,XGBoost
+Log-loss (lower better),-,XGBoost
+Brier score (lower better),-,XGBoost

@@ -1,0 +1,117 @@
+{
+  "pipeline": "Experiment A (canonical): StandardScaler + one-hot (drop=None), 46 features, blank Total Charges set to 0",
+  "final_model": "XGBoost",
+  "model_format": "xgboost-ubj (native XGBoost format)",
+  "model_file": "final_xgboost_churn_model.ubj",
+  "random_state": 42,
+  "test_size": 0.2,
+  "n_train": 5634,
+  "n_test": 1409,
+  "decision_threshold": 0.5,
+  "low_risk_upper": 0.3,
+  "numerical_columns": [
+    "Tenure Months",
+    "Monthly Charges",
+    "Total Charges"
+  ],
+  "categorical_columns": [
+    "Gender",
+    "Senior Citizen",
+    "Partner",
+    "Dependents",
+    "Phone Service",
+    "Multiple Lines",
+    "Internet Service",
+    "Online Security",
+    "Online Backup",
+    "Device Protection",
+    "Tech Support",
+    "Streaming TV",
+    "Streaming Movies",
+    "Contract",
+    "Paperless Billing",
+    "Payment Method"
+  ],
+  "feature_names": [
+    "Tenure Months",
+    "Monthly Charges",
+    "Total Charges",
+    "Gender_Female",
+    "Gender_Male",
+    "Senior Citizen_No",
+    "Senior Citizen_Yes",
+    "Partner_No",
+    "Partner_Yes",
+    "Dependents_No",
+    "Dependents_Yes",
+    "Phone Service_No",
+    "Phone Service_Yes",
+    "Multiple Lines_No",
+    "Multiple Lines_No phone service",
+    "Multiple Lines_Yes",
+    "Internet Service_DSL",
+    "Internet Service_Fiber optic",
+    "Internet Service_No",
+    "Online Security_No",
+    "Online Security_No internet service",
+    "Online Security_Yes",
+    "Online Backup_No",
+    "Online Backup_No internet service",
+    "Online Backup_Yes",
+    "Device Protection_No",
+    "Device Protection_No internet service",
+    "Device Protection_Yes",
+    "Tech Support_No",
+    "Tech Support_No internet service",
+    "Tech Support_Yes",
+    "Streaming TV_No",
+    "Streaming TV_No internet service",
+    "Streaming TV_Yes",
+    "Streaming Movies_No",
+    "Streaming Movies_No internet service",
+    "Streaming Movies_Yes",
+    "Contract_Month-to-month",
+    "Contract_One year",
+    "Contract_Two year",
+    "Paperless Billing_No",
+    "Paperless Billing_Yes",
+    "Payment Method_Bank transfer (automatic)",
+    "Payment Method_Credit card (automatic)",
+    "Payment Method_Electronic check",
+    "Payment Method_Mailed check"
+  ],
+  "numeric_ranges": {
+    "Tenure Months": [
+      0,
+      72
+    ],
+    "Monthly Charges": [
+      18.25,
+      118.75
+    ],
+    "Total Charges": [
+      0,
+      8684.8
+    ]
+  },
+  "dataset": {
+    "file": "data/Telco_customer_churn.xlsx",
+    "rows": 7043,
+    "md5": "8534d3efea2a52104cba8605fef6a7df"
+  },
+  "test_metrics": {
+    "Accuracy": 0.8133427963094393,
+    "Precision": 0.6773162939297125,
+    "Recall": 0.5668449197860963,
+    "F1 Score": 0.6171761280931587,
+    "ROC-AUC": 0.8584114805342427
+  },
+  "library_versions": {
+    "python": "3.12.3",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "shap": "0.54.1"
+  }
+}

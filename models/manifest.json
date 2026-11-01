@@ -1,0 +1,8 @@
+{
+  "note": "SHA-256 checksums of the binary model files. If a file is damaged (for example by a zip/git tool changing line endings) the app refuses to load it.",
+  "sha256": {
+    "final_xgboost_churn_model.ubj": "b2cbef12555ed9d8edc10e5f0d0620e313664fa319bacbd98575a99b447b0acd",
+    "final_churn_encoder.pkl": "1eef83acd43013feabb5e04c7d197ae37480a977526672f2fa776c31f2e0e5e7",
+    "final_churn_scaler.pkl": "f9068f4143a5c5709294dbc574e8ee9c45bb9deb9e4aa01ce69be6d8cd70a524"
+  }
+}
