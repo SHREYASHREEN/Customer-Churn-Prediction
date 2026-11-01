@@ -1,7 +1,7 @@
 # Customer Churn Prediction and Retention Analysis System using Machine Learning
 # Customer Churn Prediction and Retention Analysis System
 
-🚀 **Live Demo:** [Open Customer Churn Prediction App](https://shreyashreen.github.io/Customer-Churn-Prediction/)
+🚀 **Live Demo:** https://customer-churn-prediction-biqkerg4mysctrkt6gajs8.streamlit.app/
 
 A Streamlit application that predicts which telecom customers are likely to leave (**churn**), explains the prediction,
 suggests retention actions and can score a whole CSV file of customers. It is built on a real customer dataset
